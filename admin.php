@@ -26,7 +26,10 @@
                 <span>Bảng điều khiển</span>
             </a>
             <a href="#">
-                <span>#</span>
+                <span>Phòng</span>
+            </a>
+            <a href="#">
+                <span>Sinh Viên</span>
             </a>
         </nav>
 
@@ -52,11 +55,11 @@
         <!-- CONTENT -->
         <section class="content">
 
-            <h1>Bảng điều khiển</h1>
+        <h1>Bảng điều khiển</h1>
+        <p class="welcome">
+            Chào mừng bạn đến với hệ thống quản lý ký túc xá
+        </p>
 
-            <p class="welcome">
-                Chào mừng bạn đến với hệ thống quản lý ký túc xá
-            </p>
 
 
             <!-- THỐNG KÊ -->
@@ -64,13 +67,13 @@
         <div class="cards">
 
             <div class="card">
-                <h3>#</h3>
+                <h3>Tòa</h3>
                 <p></p>
                 <span>..........</span>
             </div>
 
             <div class="card">
-                <h3>............</h3>
+                <h3>Số Phòng</h3>
                 <p>120</p>
                 <span></span>
             </div>
@@ -78,11 +81,11 @@
             <div class="card">
                 <h3>Sinh viên</h3>
                 <p>850</p>
-                <span>Đang có</span>
+                <span>Hiện có</span>
             </div>
 
             <div class="card">
-                <h3>#</h3>
+                <h3></h3>
                 <p>#</p>
                 <span>#</span>
             </div>
@@ -100,8 +103,8 @@
 <!--thông tin-->
 <!--?php endforeach; ?-->
             <tr>
-                <th>MSSV</th>
-                <th>MSSV</th>
+                <th>Số Phòng</th>
+                <th>Số lượng</th>
             </tr>
 <!--?php endforeach; ?-->
 <!-- ?php   ?-->
@@ -110,19 +113,17 @@
                 <td><!--biến--></td>
                 <td><!--biến--></td>
                 <td><!--biến--></td>
-                <td class="trangthai">,,,,</td>
+                <td class="trangthai"></td>
             </tr>
 <!--?php endforeach; ?-->
 </table>
 
             </div>
-
             </div>
-
         </section>
-
     </main>
-
 </body>
+
+
 
 </html>

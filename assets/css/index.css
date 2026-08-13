@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f5f7fb;
+  color: blue;
+  font-size: 20px;
+  min-height: 100vh;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout {
+  display: grid;
+
+  grid-template-columns: 210px minmax(0, 1fr);
+  grid-template-rows: 67px 1fr auto;
+
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "sidebar footer";
+
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.menu_right {
+  grid-area: sidebar;
+
+  background-color: #18294e;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 210px;
+  min-width: 210px;
+  max-width: 210px;
+
+  overflow: hidden;
+}
+
+/* ================= LOGO ================= */
+
+.sidebar-logo {
+  width: 210px;
+  height: 67px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 17px;
+
+  background-color: #0b1224;
+
+  flex-shrink: 0;
+}
+
+.sidebar-logo img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  margin-right: 10px;
+
+  flex-shrink: 0;
+}
+
+.sidebar-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ================= MENU ================= */
+
+.sidebar-menu {
+  width: 210px;
+  padding-top: 20px;
+  min-width: 210px;
+}
+
+.menu_right a {
+  width: 210px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 15px 17px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.menu_right a:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* ================= HEADER ================= */
+
+.topbar {
+  grid-area: header;
+
+  height: 67px;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  border-bottom: 1px solid #ddd;
+
+  min-width: 0;
+}
+
+.topbar h2 {
+  font-size: 20px;
+  color: #18294e;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  gap: 20px;
+}
+
+.user a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+  grid-area: content;
+
+  padding: 30px;
+
+  min-width: 0;
+}
+
+.content h1 {
+  font-size: 28px;
+
+  margin-bottom: 8px;
+
+  color: #18294e;
+}
+
+.noiquy {
+  line-height: 1.8;
+
+  color: #333;
+
+  font-size: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  grid-area: footer;
+
+  background-color: #18294e;
+
+  color: white;
+
+  padding: 18px 25px;
+}
+
+.footer-content p {
+  margin: 4px 0;
+
+  font-size: 18px;
+}

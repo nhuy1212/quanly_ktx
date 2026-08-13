@@ -7,11 +7,7 @@
 
     <title>Quản lý ký túc xá</title>
 
-<<<<<<< HEAD
     <link rel="stylesheet" href="assets/css/index.css">
-=======
-    <link rel="stylesheet" href="css/index.css">
->>>>>>> 384bc876e525147d020a6589f3ec331676046251
 </head>
 
 <body>

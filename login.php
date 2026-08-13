@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("admin_funs.php");
+include_once("index.php");
 
 if(isset($_POST['login'])){
     $user = $_POST['username'];

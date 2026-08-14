@@ -1,3 +1,4 @@
+/* RESET CƠ BẢN */
 * {
   margin: 0;
   padding: 0;
@@ -5,232 +6,124 @@
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f5f7fb;
-  color: blue;
-  font-size: 20px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc; /* Nền xám rất nhạt */
+  color: #334155;
+  line-height: 1.6;
 }
 
-/* ================= SIDEBAR ================= */
-.menu_right {
-  position: absolute; /*--cha là content--*/
-  left: 0;
-  top: 0;
-  width: 240px;
-  height: 100%;
-  background-color: #18294e;
-  color: #fff;
-  font-size: 22px;
-}
-
-/* LOGO */
-
-.sidebar-logo {
-  height: 80px;
-
-  display: flex;
-  align-items: center;
-
-  padding: 15px 20px;
-
-  background-color: #0b1224;
-}
-
-.sidebar-logo img {
-  width: 45px;
-  height: 45px;
-
-  object-fit: contain;
-
-  margin-right: 12px;
-}
-
-.sidebar-logo span {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/* MENU */
-
-.menu_right {
-  padding-top: 20px;
-}
-
-.menu_right a {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 15px 20px;
-
-  color: #d1d5db;
-
-  text-decoration: none;
-
-  font-size: 22px;
-}
-/* HOVER */
-
-.menu_right a:hover {
-  background-color: #1f2937;
-  color: white;
-}
-
-/* MENU ĐANG CHỌN */
-.menu_right a.active {
-  background-color: #2563eb;
-  color: white;
-}
-/* ================= MAIN ================= */
-
-.main {
-  margin-left: 240px;
+/* --- CẤU TRÚC LAYOUT (CSS GRID) --- */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr; /* Cột trái 260px, cột phải chiếm phần còn lại */
+  grid-template-rows: auto 1fr auto; /* 3 hàng: Topbar, Content, Footer */
   min-height: 100vh;
+}
+
+/* --- 1. SIDEBAR (MENU TRÁI) --- */
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* Kéo dài từ hàng 1 đến hết hàng 2 */
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0; /* Viền xám mảnh ngăn cách */
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
 }
-/* ================= TOPBAR ================= */
 
-.topbar {
-  height: 80px;
-
-  background-color: white;
+.sidebar-logo {
   display: flex;
   align-items: center;
-
-  justify-content: space-between;
-
-  padding: 0 30px;
-
-  border-bottom: 1px solid #ddd;
-}
-.topbar h2 {
+  gap: 12px;
   font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 40px;
+  padding-left: 10px;
 }
 
-.user {
+.sidebar-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px; /* Bo góc nút bấm */
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #f1f5f9; /* Hiệu ứng hover nền xám nhạt */
+  color: #0f172a; /* Chữ đậm lên */
+}
+
+/* --- 2. TOPBAR (THANH TRÊN CÙNG) --- */
+.topbar {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-size: 20px;
-  gap: 20px;
+}
+
+.topbar h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
 }
 
 .user a {
-  color: #2563eb;
-
+  background-color: #0f172a; /* Nút đen tuyền tối giản */
+  color: #ffffff;
   text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
-/* ================= CONTENT ================= */
+.user a:hover {
+  background-color: #334155;
+}
 
+/* --- 3. CONTENT (NỘI DUNG CHÍNH) --- */
 .content {
-  padding: 30px;
-  flex: 1; /*--chiếm k gian dư --*/
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 40px;
 }
 
 .content h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.welcome {
-  color: #777;
-
-  margin-bottom: 30px;
-}
-
-/* ================= CARDS ================= */
-
-.cards {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 20px;
-
-  margin-bottom: 30px;
-}
-
-.card {
-  background-color: white;
-
-  padding: 25px;
-
-  border-radius: 10px;
-
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.card h3 {
-  color: #666;
-
-  font-size: 20px;
-
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 32px;
-
-  font-weight: bold;
-
-  color: #2563eb;
-
-  margin-bottom: 8px;
-}
-
-.card span {
-  color: #888;
-
-  font-size: 18px;
-}
-
-/* ================= TABLE ================= */
-
-.panel {
-  background-color: white;
-
-  padding: 25px;
-
-  border-radius: 10px;
-
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.panel h2 {
-  margin-bottom: 20px;
   font-size: 24px;
+  margin-bottom: 24px;
+  color: #0f172a;
 }
 
-table {
-  width: 100%;
-
-  border-collapse: collapse;
+.noiquy {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Đổ bóng cực mờ để tạo chiều sâu */
 }
 
-th,
-td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-  font-size: 18px;
+/* --- 4. FOOTER (CHÂN TRANG) --- */
+.footer {
+  grid-column: 1 / 3; /* Kéo dài full màn hình ở dưới cùng */
+  grid-row: 3 / 4;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding: 24px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
 }
 
-th {
-  background-color: #f8fafc;
-}
-
-/* TRẠNG THÁI */
-
-.available {
-  color: #16a34a;
-
-  font-weight: bold;
-}
-
-.full {
-  color: #dc2626;
-
-  font-weight: bold;
+.footer-content p {
+  margin-bottom: 6px;
 }

@@ -35,33 +35,31 @@ $notifications = [
 // Nhúng Header & Sidebar trái
 require_once 'includes/header.php';
 ?>
-
 <!-- 1. HERO BANNER SECTION -->
-<section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-16 px-6 relative overflow-hidden">
-    <div class="max-w-4xl mx-auto text-center space-y-5 relative z-10">
-        <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-indigo-400/30 inline-block">
+<section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 px-6 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+        
+        <!-- Tiêu đề chính được thu nhỏ lại cho vừa mắt hơn -->
+        <h1 class="bg-indigo-500/20 text-indigo-300 text-lg sm:text-xl md:text-3xl font-extrabold px-6 py-3 md:px-8 md:py-4 rounded-full uppercase tracking-wider border border-indigo-400/30 inline-block leading-tight shadow-md">
             Cổng thông tin lưu trú sinh viên
-        </span>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            Không gian sống hiện đại, <br><span class="text-indigo-400">An tâm học tập & Phát triển</span>
         </h1>
-        <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal leading-relaxed">
-            Hệ thống xét duyệt lưu trú trực tuyến. Tra cứu phòng trống, chọn vị trí giường ở và thanh toán điện nước tiện lợi qua mã QR.
-        </p>
-        <div class="pt-2 flex flex-col sm:flex-row justify-center gap-3">
-            <a href="booking.php" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+        
+        <!-- Các nút bấm (Giữ nguyên kích thước to rõ dễ bấm) -->
+        <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="booking.php" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-base md:text-lg px-6 py-3.5 md:px-8 md:py-4 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-magnifying-glass"></i> Tra cứu phòng trống ngay
             </a>
-            <a href="rules.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-5 py-3 rounded-xl transition flex items-center justify-center gap-2">
+            <a href="rules.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-base md:text-lg px-6 py-3.5 md:px-8 md:py-4 rounded-xl transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-file-contract"></i> Quy định & Đơn giá
             </a>
         </div>
+        
     </div>
 </section>
 
 <!-- 2. QUICK STATS BAR -->
 <section class="max-w-6xl mx-auto px-6 -mt-8 relative z-20">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-5 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 bg-white p-5 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100">
         <div class="text-center p-2 border-r border-slate-100 last:border-0">
             <p class="text-2xl font-extrabold text-indigo-600">4</p>
             <p class="text-xs text-slate-500 font-medium mt-0.5">Dãy Tòa Nhà (A1, A2, B1, B2)</p>
@@ -74,10 +72,6 @@ require_once 'includes/header.php';
             <p class="text-2xl font-extrabold text-amber-500">100%</p>
             <p class="text-xs text-slate-500 font-medium mt-0.5">Thanh Toán QR Tự Động</p>
         </div>
-        <div class="text-center p-2">
-            <p class="text-2xl font-extrabold text-purple-600">24/7</p>
-            <p class="text-xs text-slate-500 font-medium mt-0.5">An Ninh & Hỗ Trợ AI</p>
-        </div>
     </div>
 </section>
 
@@ -85,7 +79,7 @@ require_once 'includes/header.php';
 <section id="notifications" class="max-w-6xl mx-auto px-6 py-12">
     <div class="flex justify-between items-end mb-6">
         <div>
-            <h2 class="text-xl font-bold text-slate-900">Thông báo từ Ban quản lý</h2>
+            <h2 class="text-xl font-bold text-slate-900">Thông báo</h2>
             <p class="text-xs text-slate-500">Cập nhật tin tức lưu trú và lịch chốt phí mới nhất</p>
         </div>
         <a href="#" class="text-xs font-semibold text-indigo-600 hover:text-indigo-700">Xem tất cả <i class="fa-solid fa-arrow-right text-[10px]"></i></a>

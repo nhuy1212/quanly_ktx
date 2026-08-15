@@ -1,9 +1,26 @@
 <?php
-// IP ZeroTier của máy bạn bạn (Ví dụ: 10.147.18.25)
-$host     = '192.168.193.6';             // <-- Thay IP ZeroTier máy bạn bạn vào đây
-$dbname   = 'qlktx';             // <-- Tên Database bạn bạn đã tạo trong phpMyAdmin
-$username = 'qlktx_user';               // <-- Tên user MySQL tạo ở Bước 1
-$password = '123456';                 // <-- Mật khẩu tạo ở Bước 1
+// ==========================================
+// 1. CẤU HÌNH HỆ THỐNG CHUNG
+// ==========================================
+
+// Khởi tạo Session toàn cục
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Khai báo đường dẫn GỐC tuyệt đối của dự án
+// Thay đổi nếu bạn đổi tên thư mục gốc trên htdocs/www
+define('BASE_URL', '/đồ án 1/quanly_ktx');
+
+
+// ==========================================
+// 2. CẤU HÌNH KẾT NỐI DATABASE (PDO & ZeroTier)
+// ==========================================
+
+$host     = '192.168.193.6';       // IP ZeroTier của máy chủ MySQL
+$dbname   = 'qlktx';               // Tên Database
+$username = 'qlktx_user';          // User MySQL
+$password = '123456';              // Mật khẩu
 $port     = 3306;
 
 try {
@@ -15,8 +32,6 @@ try {
         PDO::ATTR_EMULATE_PREPARES   => false,
     ]);
 
-    // Bỏ comment dòng bên dưới để kiểm tra chạy thử
-    // echo "Kết nối thành công đến Database của bạn!";
 } catch (PDOException $e) {
     die("Lỗi kết nối CSDL: " . $e->getMessage());
 }

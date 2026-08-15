@@ -2,6 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -31,7 +32,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="h-16 flex items-center justify-between px-6 border-b border-slate-100">
     <a href="index.php" class="flex items-center gap-3">
         <!-- Logo hình ảnh từ thư mục assets -->
-        <img src="assets/img/logo.png" alt="Logo KTX YT" class="h-10 w-auto object-contain">
+        <img src="assets/img/logo1.png" alt="Logo KTX YT" class="h-10 w-auto object-contain">
         <div>
             <span class="font-bold text-base text-slate-900 tracking-tight block leading-tight">KTX KANTO</span>
         </div>
@@ -77,7 +78,6 @@ if (session_status() === PHP_SESSION_NONE) {
                 <button id="open-sidebar-btn" class="md:hidden text-slate-600 hover:text-indigo-600 p-1.5 rounded-lg border border-slate-200">
                     <i class="fa-solid fa-bars text-lg"></i>
                 </button>
-                <span class="font-semibold text-slate-800 text-sm md:text-base">Hệ Thống Quản Lý Ký Túc Xá</span>
             </div>
 
             <!-- User Auth Buttons -->
@@ -93,7 +93,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         </a>
                     </div>
                 <?php else: ?>
-                    <a href="login.php" class="text-xs font-semibold text-slate-700 hover:text-indigo-600 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition">
+                    <a href="account/login.php" class="text-xs font-semibold text-slate-700 hover:text-indigo-600 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition">
                         <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
                     </a>
                     <a href="booking.php" class="text-xs font-semibold bg-indigo-600 text-white px-3.5 py-1.5 rounded-lg hover:bg-indigo-700 transition shadow-sm flex items-center gap-1.5">
